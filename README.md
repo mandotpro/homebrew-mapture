@@ -19,4 +19,6 @@ Then install or upgrade as needed:
 brew upgrade mapture-canary
 ```
 
+Both release channels install the `mapture` binary. If you switch channels, uninstall the other formula first.
+
 This repository is updated by the release automation in [mandotpro/mapture.dev](https://github.com/mandotpro/mapture.dev).

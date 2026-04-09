@@ -10,8 +10,6 @@ class MaptureCanary < Formula
     skip "Managed by the Mapture release automation."
   end
 
-  conflicts_with "mapture", because: "both formulae install the mapture binary"
-
   depends_on "go" => :build
 
   def install
