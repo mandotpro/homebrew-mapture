@@ -1,9 +1,9 @@
 class MaptureCanary < Formula
   desc "Repo-native architecture mapping that stays close to the code"
   homepage "https://github.com/mandotpro/mapture.dev"
-  url "https://github.com/mandotpro/mapture.dev/archive/5efa02c5bd28089a7f89cb5375b8b617fce3d808.tar.gz"
-  sha256 "4c4b91bd8f46d8aa6dea00132b7dd068dc665570956f7ae021cb9db2664886f3"
-  version "0.0.0-canary.2026-04-12122131.5efa02c"
+  url "https://github.com/mandotpro/mapture.dev/archive/bbc774efacfca30fd825144974154ffd6b429b98.tar.gz"
+  sha256 "1b64c250d3f0c1c83f55a05b624e1cdee0352111d89a30c7892a20df1df37370"
+  version "0.0.0-canary.2026-04-12124704.bbc774e"
   license "MIT"
 
   livecheck do
@@ -16,13 +16,13 @@ class MaptureCanary < Formula
     ldflags = %W[
       -s
       -w
-      -X github.com/mandotpro/mapture.dev/src/cmd.version=0.0.0-canary.20260412+sha.5efa02c
+      -X github.com/mandotpro/mapture.dev/src/cmd.version=0.0.0-canary.20260412+sha.bbc774e
     ]
 
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"mapture"), "./src"
   end
 
   test do
-    assert_match "mapture version 0.0.0-canary.20260412+sha.5efa02c", shell_output("#{bin}/mapture --version")
+    assert_match "mapture version 0.0.0-canary.20260412+sha.bbc774e", shell_output("#{bin}/mapture --version")
   end
 end
